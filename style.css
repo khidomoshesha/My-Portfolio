@@ -1,0 +1,536 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Home Page Layout */
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.home-image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: scale-down;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #2980b9;
+}
+
+.home-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+.home-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn {
+    background-color: #2980b9;
+}
+
+.linkedin-btn {
+    background-color: #0077b5;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+.download-btn:hover {
+    background-color: #1f5d8d;
+}
+
+.linkedin-btn:hover {
+    background-color: #005582;
+}
+
+/* About Me Section */
+.about-me-content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    color: #7f8c8d;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    line-height: 1.5;
+    opacity: 0;
+    /* Hidden initially */
+    transform: translateY(30px);
+    /* Start below the view */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Fade-in effect when content enters view */
+.about-me-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move into the view */
+}
+
+/* Education Section */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.education-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.education-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.education-item:hover h3 {
+    color: #16a085;
+    /* Change color on hover for the title */
+}
+
+.education-item:hover p {
+    color: #2c3e50;
+    /* Darker color for the description on hover */
+}
+
+/* Work Experience Section */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.experience-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.experience-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.position {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.experience-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-item li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 8px;
+}
+
+.experience-item ul li::before {
+    content: "• ";
+    color: #2980b9;
+}
+
+/* Projects Section */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2980b9;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* General font styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Apply Google Font */
+    background-color: #f4f4f4;
+    /* Light background for the entire page */
+    color: #333;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 500px;
+    margin: 18px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Typewriter Effect for Intro Text */
+.contact-intro {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 18px;
+    font-weight: 300;
+    line-height: 1;
+    white-space: nowrap;
+    /* Ensure text stays on one line */
+    overflow: hidden;
+    /* Hide text that overflows */
+    border-right: 2px solid #333;
+    /* Simulate cursor */
+    width: 0;
+    /* Start with no text visible */
+    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typewriter Animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Text and Input Styling */
+.contact-form label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 85%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Submit Button Styling */
+.contact-form .submit-btn {
+    padding: 10px 21px;
+    font-size: 1rem;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+.contact-form .submit-btn:active {
+    transform: scale(1);
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Folder Styles */
+.folder {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 800px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+/* Tab Navigation */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    padding: 14px 20px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    background: #333;
+    color: white;
+    border: none;
+    font-size: 1.6rem;
+    padding: 14px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab:hover {
+    transform: translateY(-4px);
+    background-color: #222;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.7s ease-in-out forwards;
+    text-align: center;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Colors for Each Tab */
+.tab[data-color="coolblue"] {
+    background-color: #1e90ff;
+}
+
+.tab[data-color="teal"] {
+    background-color: teal;
+}
+
+.tab[data-color="green"] {
+    background-color: #32cd32;
+}
+
+.tab[data-color="purple"] {
+    background-color: #6a5acd;
+}
+
+.tab[data-color="yellow"] {
+    background-color: #f4c542;
+}
+
+.tab[data-color="pink"] {
+    background-color: #ff69b4;
+}
+
+/* Heading Styles */
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2980b9;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #34495e;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Paragraph & List Styles */
+p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 12px 0;
+    font-size: 1.2rem;
+    color: #34495e;
+    font-weight: 500;
+}
+
+/* Links */
+a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}

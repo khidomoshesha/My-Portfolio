@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veronica Moshesha - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="folder">
+            <div class="content">
+                <div id="home" class="tab-content active">
+                    <div class="home-content">
+                        <div class="home-image">
+                            <img src="IMG_3687.jpeg" alt="Veronica Moshesha">
+                        </div>
+                        <div class="home-text">
+                            <h1>Veronica Moshesha</h1>
+                            <p>Electrical Technician | Quality Assurance | Customer Relations</p>
+                        </div>
+                    </div>
+                    <!-- Buttons Section Below Home Text -->
+                    <div class="home-buttons">
+                        <a href="CV VERONICA MOSHESHA.pdf" class="btn download-btn" download>My CV</a>
+                        <a href="https://www.linkedin.com/in/veronica-moshesha-292583294/" class="btn linkedin-btn"
+                            target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+                <div id="about" class="tab-content">
+                    <h2>About Me</h2>
+                    <div class="about-me-content">
+                        <p>A highly skilled Electrical Technician with over nine years of experience in the electrical
+                            field, complemented by a strong background in quality assurance and customer relationship
+                            management. As a Quality Technician, specialized in tracing events on electrical networks,
+                            collecting and analyzing data to identify areas for improvement, and proposing projects such
+                            as refurbishment or substation upgrades. Additionally, served as a CRM Supervisor, leading a
+                            team of 11 individuals to enhance customer service operations and ensure efficient workflow.
+                            A results-driven professional with a keen eye for detail, strong leadership abilities, and a
+                            commitment to optimizing electrical infrastructure and operational efficiency.</p>
+                    </div>
+                </div>
+                <div id="education" class="tab-content">
+                    <h2>Education</h2>
+                    <div class="education-container">
+                        <div class="education-item">
+                            <h3>B-Tech (Electrical Engineering HC)</h3>
+                            <p>Tshwane University of Technology (2018)</p>
+                        </div>
+                        <div class="education-item">
+                            <h3>National Diploma (Electrical Engineering, Heavy Current)</h3>
+                            <p>Central University of Technology, Free State (2012)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="experience" class="tab-content">
+                    <h2>Professional Experience</h2>
+                    <div class="experience-container">
+                        <div class="experience-item">
+                            <h3>Eskom Distribution – Vryburg Area</h3>
+                            <p class="position">Customer Relations Supervisor (August 2019 – February 2023)</p>
+                        </div>
+                        <div class="experience-item">
+                            <h3>Eskom Distribution – Vryburg Area</h3>
+                            <p class="position">Quality Assurance Technician (March 2013 – July 2019)</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="projects" class="tab-content">
+                    <h2>Projects</h2>
+                    <div class="projects-container">
+                        <div class="project-item">
+                            <img src="OIP.jpg" alt="ALFRED Chatbox - Eskom">
+                            <h3>ALFRED Chatbox - Eskom</h3>
+                        </div>
+                        <div class="project-item">
+                            <img src="pexels-pixabay-236089.jpg" alt="Substation Upgrade Project">
+                            <h3>Substation Upgrade Project</h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact" class="tab-content">
+                    <h2>Contact Me</h2>
+                    <p>Email: <a href="mailto:mamoketeveronicam@gmail.com">mamoketeveronicam@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+27833859544">083 385 9544</a></p>
+
+                    <!-- Typewriter text above the form -->
+                    <p class="contact-intro typewriter">Feel free to reach out if you would like to connect or schedule
+                        an interview.</p>
+
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="2" placeholder="Your Message" required></textarea>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+            <nav class="tabs">
+                <button class="tab" data-tab="home" data-color="coolblue">🏠</button>
+                <button class="tab" data-tab="about" data-color="teal">ℹ️</button>
+                <button class="tab" data-tab="education" data-color="green">🎓</button>
+                <button class="tab" data-tab="experience" data-color="purple">💼</button>
+                <button class="tab" data-tab="projects" data-color="yellow">🖥️</button>
+                <button class="tab" data-tab="contact" data-color="pink">✉️</button>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
